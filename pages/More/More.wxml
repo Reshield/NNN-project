@@ -1,0 +1,16 @@
+<!--pages/More/More.wxml-->
+<view class="myview">
+  <van-image
+  width="100"
+  height="100"
+  radius="8"
+  src="https://img.yzcdn.cn/vant/cat.jpeg"
+  class="myimage"
+  />
+</view>
+
+<view class="setting">
+  <van-cell title="Setting" icon="setting" />
+</view>
+  
+  

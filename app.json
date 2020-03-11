@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/Notifications/Notifications",
+    "pages/Contacts/Contacts",
+    "pages/More/More",
+    "pages/index/index",
+    "pages/logs/logs"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/Notifications/Notifications",
+        "text": "Notifications",
+        "iconPath": "/static/images/_Notifications.png",
+        "selectedIconPath": "./static/images/Notifications.png"
+      },
+      {
+        "pagePath": "pages/Contacts/Contacts",
+        "text": "Contacts",
+        "iconPath": "./static/images/_Contacts.png",
+        "selectedIconPath": "./static/images/Contacts.png"
+      },
+      {
+        "pagePath": "pages/More/More",
+        "text": "More",
+        "iconPath": "./static/images/_More.png",
+        "selectedIconPath": "./static/images/More.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Wechat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "dark"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

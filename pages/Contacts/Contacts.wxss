@@ -1,0 +1,7 @@
+/* pages/Contacts/Contacts.wxss */
+page {
+  background-color: 	#C8C8C8;
+}
+.user {
+  height: 30px;
+}

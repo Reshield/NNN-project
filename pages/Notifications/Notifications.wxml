@@ -1,0 +1,23 @@
+<!--pages/Notifications/Notifications.wxml-->
+<wxs src="../filter/filter.wxs" module="filter"></wxs>
+<van-field
+  value="{{ value }}"
+  placeholder="issued Notifications"
+  border="{{ true }}"
+  size="large"
+  bind:change="onChange"
+  right-icon="play"
+/>
+<van-cell-group wx:for="{{usersdata}}" wx:key="key">
+  <view class="card">
+    <view class="title">{{item.creator.name}}</view>
+    <view class="times">{{ item.sentTime }}</view>
+    <image class="userImages" src="/static/images/source41.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false"/>
+    <view class="cardDesc">{{ filter.substring(item.summary, 100) }}</view>
+    <button style="background-color:{{item.background}}; color:{{item.color}};font-size: 12px;" data-item="{{item}}" bindtap="btnclick">{{item.ifCopy}}</button>
+      
+  </view>
+    
+</van-cell-group>
+
+  

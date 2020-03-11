@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "van-index-bar": "/miniprogram_npm/@vant/weapp/index-bar/index",
+    "van-index-anchor": "/miniprogram_npm/@vant/weapp/index-anchor/index",
+    "van-cell": "/miniprogram_npm/@vant/weapp/cell/index",
+    "van-cell-group": "/miniprogram_npm/@vant/weapp/cell-group/index",
+    "van-icon": "/miniprogram_npm/@vant/weapp/icon/index"
+  },
+  "navigationBarTitleText": "Contacts"
+}

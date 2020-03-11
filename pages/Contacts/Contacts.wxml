@@ -1,0 +1,21 @@
+<!--pages/Contacts/Contacts.wxml-->
+<view>
+  <van-cell title="Groups" icon="friends" />
+</view>
+  
+
+<van-index-bar scroll-top="{{ scrollTop }}">
+  <view>
+    <van-index-anchor index="A" />
+    <van-cell-group wx:for="{{ groupsA }}" wx:key="key">
+      <van-cell title="{{ item.name }}"/>
+    </van-cell-group>
+  </view>
+
+  <view>
+    <van-index-anchor index="B" />
+    <van-cell-group wx:for="{{ groupsB }}" wx:key="key">
+      <van-cell title="{{ item.name }}"/>
+    </van-cell-group>
+  </view>
+</van-index-bar>

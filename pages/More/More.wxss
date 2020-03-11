@@ -1,0 +1,18 @@
+/* pages/More/More.wxss */
+page {
+  background-color: 	#C8C8C8;
+}
+.myimage {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+}
+.myview {
+  width: 100%;
+  height: 60%;
+  background-color: white;
+  text-align: center;
+}
+.setting {
+  margin-top: 10px;
+}
