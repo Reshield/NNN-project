@@ -1,12 +1,31 @@
 /* pages/Notifications/Notifications.wxss */
 page {
-  background-color: 	#C8C8C8;
+  background-color: #D0D0D0;
+}
+.field {
+  height: 50px;
+  border-style: solid;
+  border-width: 0.5px;
+  border-radius: 8px;
+  border-color:	rgba(128,128,128, 0.5);
+  width: 94%;
+  display: block;
+  margin-left: 2%;
+  margin-top: 5%;
+  padding-left: 5px;
+  margin-bottom: 10px;
+}
+.feiji {
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 .card {
+  display: block;
   padding-top: 10px;
   background-color: #F8F8F8;
   margin-top: 5px;
-  
+  height: 70px;
 }
 .userImages {
   width: 50px;
@@ -18,9 +37,10 @@ page {
   font-size: 14px;
   font-weight: bold;
   margin-left: 50px;
-  margin-right: 20%;
+  margin-right: 30%;
 }
 .times {
+  margin-right: 0;
   display: inline;
   font-size: 12px;
   color: black;
@@ -28,8 +48,23 @@ page {
 .userImages {
   display: block;
   float: left;
+  margin-top: -20px;
 }
 .cardDesc {
+  float: left;
+  display: block;
   font-size: 12px;
   color: 	#C8C8C8;
+  width: 60%;
+}
+.copyButton {
+  margin-top: 15px;
+  position: relative;
+  padding-left: 2%;
+  display: flex;
+  line-height: 20px;
+  text-align: center;
+  width: 45px;
+  font-size: 12px;
+  height: 25px;
 }

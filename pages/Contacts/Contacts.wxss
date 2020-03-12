@@ -1,6 +1,14 @@
 /* pages/Contacts/Contacts.wxss */
 page {
-  background-color: 	#C8C8C8;
+  background-color: 	 #D0D0D0;
+}
+.groups {
+  margin-top: 20px;
+}
+.cell {
+  font-size: 16px;
+  margin-left: 5px;
+  margin-top: 10px;
 }
 .user {
   height: 30px;

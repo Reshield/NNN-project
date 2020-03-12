@@ -1,12 +1,21 @@
 <!--pages/More/More.wxml-->
 <view class="myview">
-  <van-image
-  width="100"
-  height="100"
-  radius="8"
-  src="https://img.yzcdn.cn/vant/cat.jpeg"
-  class="myimage"
-  />
+  <view class="someimages">
+    <van-image
+      width="100"
+      height="100"
+      radius="8"
+      src="https://img.yzcdn.cn/vant/cat.jpeg"
+      class="myimage"
+      />
+    <text class="russell" selectable="false" space="false" decode="false">Pat Russell</text>
+  </view>
+        <van-image
+    width="20"
+    height="20"
+    src="/static/images/pen.png"
+    class="pen"
+    />
 </view>
 
 <view class="setting">

@@ -1,5 +1,5 @@
 <!--pages/Contacts/Contacts.wxml-->
-<view>
+<view class="groups">
   <van-cell title="Groups" icon="friends" />
 </view>
   
@@ -8,14 +8,32 @@
   <view>
     <van-index-anchor index="A" />
     <van-cell-group wx:for="{{ groupsA }}" wx:key="key">
-      <van-cell title="{{ item.name }}"/>
+      <van-cell>
+        <view slot="title" class="cell">{{item.name}}</view>
+          <van-image
+            slot="icon"
+            radius="5"
+            width="40"
+            height="40"
+            src="https://img.yzcdn.cn/vant/cat.jpeg"
+          />
+      </van-cell>
     </van-cell-group>
   </view>
 
   <view>
     <van-index-anchor index="B" />
     <van-cell-group wx:for="{{ groupsB }}" wx:key="key">
-      <van-cell title="{{ item.name }}"/>
+      <van-cell>
+        <view slot="title" class="cell">{{item.name}}</view>
+          <van-image
+            slot="icon"
+            radius="5"
+            width="40"
+            height="40"
+            src="https://img.yzcdn.cn/vant/cat.jpeg"
+          />
+      </van-cell>
     </van-cell-group>
   </view>
 </van-index-bar>

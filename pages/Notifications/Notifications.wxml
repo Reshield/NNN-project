@@ -1,23 +1,22 @@
 <!--pages/Notifications/Notifications.wxml-->
 <wxs src="../filter/filter.wxs" module="filter"></wxs>
-<van-field
-  value="{{ value }}"
-  placeholder="issued Notifications"
-  border="{{ true }}"
-  size="large"
-  bind:change="onChange"
-  right-icon="play"
-/>
+<input type="text" class="field" placeholder="issued Notifications"/>
+<van-image
+  width="40"
+  height="40"
+  class="feiji"
+  src="/static/images/feiji.png"
+/>  
 <van-cell-group wx:for="{{usersdata}}" wx:key="key">
   <view class="card">
     <view class="title">{{item.creator.name}}</view>
     <view class="times">{{ item.sentTime }}</view>
     <image class="userImages" src="/static/images/source41.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false"/>
     <view class="cardDesc">{{ filter.substring(item.summary, 100) }}</view>
-    <button style="background-color:{{item.background}}; color:{{item.color}};font-size: 12px;" data-item="{{item}}" bindtap="btnclick">{{item.ifCopy}}</button>
-      
+    <!-- <button style="background-color:{{item.copied ? '#F8F8F8':'#FF0000'}}; color:{{item.copied? '#33FF99':'#FFFFFF'}};" class="copyButton" data-item="{{item}}" bindtap="btnclick">{{item.copied? 'copied':'copy'}}</button> -->
+    <button wx:if = "{{item.copied == false}}" wx:for-index="idx"  style="background-color:#FF0000; color:#FFFFFF;" class="copyButton" data-index="{{index}}" bindtap="btnclickFalse"> copy </button>
+    <button wx:if = "{{item.copied == true}}" style="background-color:#F8F8F8; color:#33FF99;" class="copyButton" data-index="{{index}}" bindtap="btnclickTrue"> copied </button>
   </view>
-    
 </van-cell-group>
 
   

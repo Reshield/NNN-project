@@ -12,35 +12,19 @@ Page({
     btnBackground: "",
     btnColor: ""
   },
-  btnclick(arg) {
-    let ifCopied = arg.currentTarget.dataset.item.copied
-    let myid = arg.currentTarget.dataset.item.id
-    this.data.usersdata.forEach((item, index, arr) => {
-      if(this.data.usersdata[index].id === myid) {
-        let userCopy = 'usersdata[' + index + '].copied'
-        let userIfCopy = 'usersdata[' + index + '].ifCopy'
-        let btnBackgroundColor = 'usersdata[' + index + '].background'
-        let btnColor = 'usersdata[' + index + '].color'
-        if(this.data.usersdata[index].copied == false) {
-          console.log(userCopy)
-          this.setData({
-            [userCopy]: true,
-            [userIfCopy]: "copied",
-            [btnBackgroundColor]: "#F8F8F8",
-            [btnColor]: "#33FF99"
-          })
-          console.log(this.data.usersdata)
-        }else {
-          this.setData({
-            [userCopy]: false,
-            [userIfCopy]: "copy",
-            [btnBackgroundColor]: "#FF0000",
-            [btnColor]: "#FFFFFF"
-          })
-        }
-      }
+  btnclickFalse(arg) {
+    let index = arg.currentTarget.dataset.index
+    let userCopy = 'usersdata[' + index + '].copied'
+    this.setData({
+      [userCopy]: true,
     })
-    
+  },
+  btnclickTrue(arg) {
+    let index = arg.currentTarget.dataset.index
+    let userCopy = 'usersdata[' + index + '].copied'
+    this.setData({
+      [userCopy]: false,
+    })
   },
   /**
    * 生命周期函数--监听页面加载
@@ -64,7 +48,10 @@ Page({
     this.setData({
       usersdata: checkCopy()
     })
-    
+    wx.setTabBarBadge({
+      index: 0,
+      text: '8'
+    })
     
   },
 
